@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  h1 {
+    color: pink;
+  }
+
+  a {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+  }
+}
+@layer components {
+  .card {
+    @apply w-[256px] flex flex-col rounded-lg border border-black overflow-hidden;
+  }
+
+  .card-img {
+    @apply w-full h-[150px] bg-black object-cover;
+  }
+
+  .card-img > img {
+    @apply w-full;
+  }
+
+  .card-body {
+    @apply flex-1 p-4;
+  }
+
+  .card-body > div {
+    @apply min-h-[80px] flex flex-col flex-wrap justify-start mb-4;
+  }
+}
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+}
